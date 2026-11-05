@@ -132,11 +132,12 @@ const repo = 'FY7007189';
 
             try {
                 const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
+    method: 'GET',
+    cache: 'no-store',
+    headers: {
+        'Accept': 'application/vnd.github.v3+json'
+    }
+});
 
                 if (!response.ok) {
                     throw new Error('GitHub API error: ' + response.status);
