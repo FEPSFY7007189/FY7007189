@@ -6,13 +6,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>ENG0018 - Solo Project</title>
+<style>
 
-    <style>
+    :root {
+        --background: #f5f3ef;
+        --slate: #34413f;
+        --bronze: #b28a58;
+        --stone: #e5e4df;
+        --white: #ffffff;
+        --text: #26302f;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 30px;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--text);
+        margin: 0;
+        padding: 30px 5%;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .banner {
+        display: block;
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        margin: 0 auto 25px;
+    }
+
+    h1, h2, h3, h4 {
+        color: var(--slate);
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 28px;
+        border-bottom: 2px solid var(--bronze);
+        padding-bottom: 12px;
+        margin-top: 45px;
+    }
+
+    h4 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        margin-bottom: 22px;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: #d2d0ca;
+        margin: 25px 0;
+    }
+
+    .article {
+        background-color: var(--white);
+        max-width: 1100px;
+        padding: 40px;
+        margin: 30px auto;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 320px;
+        background-color: var(--white);
+    }
+
+    td, th {
+        border-bottom: 1px solid var(--stone);
+        padding: 12px 18px;
+        text-align: left;
+    }
+
+    th {
+        background-color: var(--slate);
+        color: var(--white);
+    }
+
+    a {
+        color: #876238;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+        transition: color 0.2s;
+    }
+
+    a:hover {
+        color: var(--slate);
+        text-decoration: underline;
+    }
+
+    figure {
+        margin: 35px 0;
+    }
+
+    figure img {
+        border: 1px solid #d8d8d3;
+        border-radius: 4px;
+    }
+
+    figcaption {
+        color: #666666;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    ol li {
+        margin-bottom: 20px;
+    }
+
+    button {
+        background-color: var(--slate);
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: #876238;
+    }
+
+    #word-count, #last-updated {
+        font-size: 14px;
+        color: #626b67;
+    }
+
+    @media (max-width: 700px) {
         body {
-            background-color: #FFFFFF;
-            margin: 30px 50px;
-            font-family: Calibri, Arial, sans-serif;
+            padding: 15px;
         }
+
+        .article {
+            padding: 20px;
+        }
+
+        figure {
+            float: none !important;
+            width: 100% !important;
+            margin: 25px 0 !important;
+        }
+    }
+
+</style>
 
         table {
             font-family: Arial, sans-serif;
