@@ -174,7 +174,70 @@
             margin: 25px 0 !important;
         }
     }
+    .project-hero {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        background-color: var(--stone);
+        min-height: 350px;
+        max-width: 1400px;
+        margin: 30px auto;
+        overflow: hidden;
+    }
 
+    .hero-text {
+        padding: 45px;
+        align-self: center;
+    }
+
+    .project-label {
+        color: #876238;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: clamp(26px, 3vw, 42px);
+        font-weight: 600;
+        line-height: 1.25;
+        margin: 0;
+    }
+
+    .hero-line {
+        width: 65px;
+        height: 3px;
+        background-color: var(--bronze);
+        margin-top: 25px;
+    }
+
+    .project-subtitle {
+        color: #626b67;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        background-color: var(--slate);
+        background-image:
+            linear-gradient(rgba(52,65,63,0.15),
+                            rgba(52,65,63,0.25)),
+            url('kart-welding.jpeg');
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;
+    }
+
+    @media (max-width: 700px) {
+        .project-hero {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-text {
+            padding: 25px;
+        }
+    }
 </style>
 </head>
 
