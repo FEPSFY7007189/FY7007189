@@ -192,12 +192,69 @@ Other forms of structural bonding, especially seen when a chassis is not made en
       </p>
 
         </div>
+<h3 id="References">References</h3>
 
-        <h3 id="References">References</h3>
+<ol>
 
-        <p>
-            Your references will go here.
-        </p>    
+    <li>
+        Artizono (2025) ‘4130 Chromoly vs 6061 Aluminium: A Comprehensive Comparison’. Artizono, 24 May. Available at:
+        <a href="https://artizono.com/4130-chromoly-vs-6061-aluminum-a-comprehensive-comparison/" target="_blank">https://artizono.com/4130-chromoly-vs-6061-aluminum-a-comprehensive-comparison/</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        Cambridge University Press (n.d.) ‘Durability’. Cambridge Dictionary. Available at:
+        <a href="https://dictionary.cambridge.org/dictionary/english/durability" target="_blank">https://dictionary.cambridge.org/dictionary/english/durability</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        3M (n.d.) ‘Structural Adhesives: Frequently Asked Questions’. 3M United Kingdom. Available at:
+        <a href="https://www.3m.co.uk/3M/en_GB/bonding-and-assembly-uk/structural-adhesives/faqs/" target="_blank">https://www.3m.co.uk/3M/en_GB/bonding-and-assembly-uk/structural-adhesives/faqs/</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        Ganio-Mego, J. (2023) ‘Evaluating and Comparing Bicycle Tubing Materials: A Simplified FEM Methodology’. OSF Preprints. Available at:
+        <a href="https://doi.org/10.31219/osf.io/tyxdg" target="_blank">https://doi.org/10.31219/osf.io/tyxdg</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        Granell Heredero, I. and Hernández-Ros Briales, A. (2023) Manufacture and Testing of a Formula Student Suspension. Master's thesis. Universidad Pontificia Comilla’s. Available at:
+        <a href="http://hdl.handle.net/11531/81636" target="_blank">http://hdl.handle.net/11531/81636</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        MatWeb, LLC (n.d.) ‘Aluminium 6061-T6; 6061-T651’. Mat Web Material Property Data. Available at:
+        <a href="https://www.matweb.com/search/datasheet.aspx?ckck=1&amp;matguid=b8d536e0b9b54bd7b69e4124d8f1d20a&amp;n=1" target="_blank">https://www.matweb.com/search/datasheet.aspx?ckck=1&amp;matguid=b8d536e0b9b54bd7b69e4124d8f1d20a&amp;n=1</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        Oxford University Press (n.d.) ‘Efficiency’. Oxford Advanced Learner’s Dictionary. Available at:
+        <a href="https://www.oxfordlearnersdictionaries.com/definition/english/efficiency" target="_blank">https://www.oxfordlearnersdictionaries.com/definition/english/efficiency</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+    <li>
+        Quiñonez, E. (2025) ‘Surface Welding Defects and Their Impact on Weld Quality’. Insipient, 22 July. Available at:
+        <a href="https://inspenet.com/en/articles/welding-defects-impact-on-weld-quality/" target="_blank">https://inspenet.com/en/articles/welding-defects-impact-on-weld-quality/</a>
+        (Accessed: 6 November 2026).
+    </li>
+
+</ol>
+
+<!-- Kart Bodywork Photograph -->
+
+<figure style="text-align: center;">
+
+    <img src="kart-bodywork.jpg"
+         alt="Home built kart bodywork"
+         style="width: 60%; max-width: 600px; height: auto;">
+
+</figure>
         
         <p id="word-count">Total Word Count: calculating...</p>
 
@@ -280,31 +337,30 @@ Other forms of structural bonding, especially seen when a chassis is not made en
 
         window.onload = getLastUpdatedTime;
     </script>
+<!-- Automatic Word Count Script -->
+<script>
+    function updateWordCount() {
 
-    <!-- Automatic Word Count Script -->
-    <script>
-        function updateWordCount() {
+        const paragraphs = document.querySelectorAll(
+            '#Introduction_InText p, #Analysis_InText p, #Conclusion_InText p'
+        );
 
-            const introduction =
-                document.getElementById('Introduction_InText').innerText;
+        const combinedText = Array.from(paragraphs)
+            .map(paragraph => paragraph.innerText)
+            .join(' ');
 
-            const analysis =
-                document.getElementById('Analysis_InText').innerText;
+        const words = combinedText.trim().split(/\s+/);
 
-            const combinedText = introduction + ' ' + analysis;
+        const wordCount = combinedText.trim() === ''
+            ? 0
+            : words.length;
 
-            const words = combinedText.trim().split(/\s+/);
+        document.getElementById('word-count').innerText =
+            'Total Word Count: ' + wordCount;
+    }
 
-            const wordCount = combinedText.trim() === ''
-                ? 0
-                : words.length;
-
-            document.getElementById('word-count').innerText =
-                'Total Word Count: ' + wordCount;
-        }
-
-        updateWordCount();
-    </script>
-
+    updateWordCount();
+</script>
+    
 </body>
 </html>
