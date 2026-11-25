@@ -239,6 +239,57 @@
         }
     }
 </style>
+        .page-layout {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 35px;
+        max-width: 1400px;
+        margin: 40px auto;
+        align-items: start;
+    }
+
+    .sidebar {
+        background-color: var(--stone);
+        padding: 25px;
+        position: sticky;
+        top: 30px;
+    }
+
+    .sidebar h3 {
+        font-size: 18px;
+        margin-top: 0;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--bronze);
+    }
+
+    .sidebar nav a {
+        display: block;
+        padding: 14px 0;
+        font-size: 14px;
+        color: var(--slate);
+        border-bottom: 1px solid #d2d0ca;
+    }
+
+    .sidebar nav a:hover {
+        color: #876238;
+        padding-left: 8px;
+    }
+
+    .page-layout .article {
+        margin: 0;
+        max-width: none;
+        min-width: 0;
+    }
+
+    @media (max-width: 900px) {
+        .page-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            position: static;
+        }
+    }
 </head>
 
 <body>
@@ -279,35 +330,23 @@
 </header>
     
     <hr>
+    <div class="page-layout">
 
-    <h3>Table of Contents</h3>
+        <aside class="sidebar">
 
-    <table>
-        <tr>
-            <th>Contents</th>
-        </tr>
-        <tr>
-            <td><a href="#Abstract">Abstract</a></td>
-        </tr>
-        <tr>
-            <td><a href="#Introduction">Introduction</a></td>
-        </tr>
-        <tr>
-            <td><a href="#Analysis">Analysis and Discussion</a></td>
-        </tr>
-    <tr>
-    <td><a href="#Conclusion">Conclusion</a></td>
-</tr>
+            <h3>Table of Contents</h3>
 
-<tr>
-    <td><a href="#References">References</a></td>
-</tr>
-    </table>
+            <nav>
+                <a href="#Abstract">Abstract</a>
+                <a href="#Introduction">Introduction</a>
+                <a href="#Analysis">Analysis and Discussion</a>
+                <a href="#Conclusion">Conclusion</a>
+                <a href="#References">References</a>
+            </nav>
 
-    <hr>
+        </aside>
 
-    <div class="article">
-
+        <div class="article">
         <h3 id="Abstract">Abstract</h3>
         
         <p>
@@ -468,6 +507,8 @@ Other forms of structural bonding, especially seen when a chassis is not made en
 </ol>
 
         <p id="word-count">Total Word Count: calculating...</p>
+
+    </div>
 
     </div>
 
